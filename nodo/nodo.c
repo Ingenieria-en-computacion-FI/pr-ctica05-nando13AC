@@ -3,9 +3,15 @@
 
 Nodo* nodo_crear(int dato)
 {
-    // Todo: implementar la función }
-
-void nodo_destruir(Nodo* nodo)
-{
-    // Todo: implementar la función 
+    Nodo *nuevo = (Nodo*)malloc(sizeof(Nodo));
+    if( nuevo != NULL){
+         nuevo->dato=dato;
+         nuevo->siguiente=NULL;
+    }
+    return nuevo;
+}
+void nodo_destruir(Nodo* nodo){
+    if( nodo != NULL){
+        free(nodo);
+    }
 }
